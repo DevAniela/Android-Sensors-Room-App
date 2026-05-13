@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_sensors"
+        android:title="sensors data" />
+
+    <item
+        android:id="@+id/nav_visualization"
+        android:title="visualization" />
+
+    <item
+        android:id="@+id/nav_api"
+        android:title="API config" />
+</menu>

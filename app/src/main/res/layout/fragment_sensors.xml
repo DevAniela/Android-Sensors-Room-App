@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SensorsFragment">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvTitlu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Accelerometru"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvAxaX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Axa X: 0.0"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvAxaY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Axa Y: 0.0"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvAxaZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Axa Z: 0.0"
+        android:textSize="20sp"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnSalveaza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvează în Baza de Date"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+</LinearLayout>

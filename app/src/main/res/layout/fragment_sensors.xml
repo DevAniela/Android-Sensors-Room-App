@@ -1,50 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:padding="16dp"
+    android:background="#F5F5F5">
 
-    <TextView
-        android:id="@+id/tvTitlu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date Accelerometru"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
-
-    <TextView
-        android:id="@+id/tvAxaX"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Axa X: 0.0"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvAxaY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Axa Y: 0.0"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Senzori Telefon"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/tvAxaZ"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Axa Z: 0.0"
-        android:textSize="20sp"
-        android:layout_marginBottom="48dp"/>
+        <TextView android:id="@+id/tvAccel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Accelerometru (x,y,z): 0.0, 0.0, 0.0" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvGyro" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Giroscop (x,y,z): 0.0, 0.0, 0.0" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvMag" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Magnetometru (x,y,z): 0.0, 0.0, 0.0" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvOrient" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Orientare (x,y,z): 0.0, 0.0, 0.0" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvBaro" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Barometru: 0.0 hPa" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvTemp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Temperatura: 0.0 °C" android:textSize="16sp" android:layout_marginBottom="24dp"/>
 
-    <Button
-        android:id="@+id/btnSalveaza"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salvează în Baza de Date"
-        android:textSize="18sp"
-        android:padding="16dp"/>
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#CCCCCC" android:layout_marginBottom="16dp"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Locație (GPS)"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:id="@+id/tvGpsLatLon" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lat/Lon: 0.0, 0.0" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvGpsAltSpeed" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Altitudine/Viteză: 0.0 m, 0.0 m/s" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvGpsErrSats" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Eroare/Sateliți: 0.0 m, 0/0" android:textSize="16sp" android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/btnSalveazaToate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvează în Baza de Date"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+</ScrollView>

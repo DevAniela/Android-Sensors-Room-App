@@ -1,5 +1,6 @@
 package com.example.senzori_kot_sqlite_tema3
 
+import SensorsFragment
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity

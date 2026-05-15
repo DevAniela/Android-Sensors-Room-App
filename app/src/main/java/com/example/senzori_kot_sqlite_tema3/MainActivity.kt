@@ -21,8 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation)
 
-        // primul ecran care apare atunci cand se deschide aplicatia este implicit sensors data
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SensorsFragment()).commit()
+        // conditia pentru rotirea telefonului: incarca primul fragment DOAR daca aplicatia porneste de la zero (nu la rotire)
+        if (savedInstanceState == null) {
+            // primul ecran care apare atunci cand se deschide aplicatia este implicit sensors data
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SensorsFragment()).commit()
+        }
 
         // asculta clickurile pe butoanele de jos
         bottomNav.setOnItemSelectedListener { item ->
@@ -31,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             when(item.itemId) {
                 R.id.nav_sensors -> fragmentSelectat = SensorsFragment()
                 R.id.nav_visualization -> fragmentSelectat = VisualizationFragment()
-                R.id.nav_api -> fragmentSelectat = ApiConfigFragment()
+                R.id.nav_api -> fragmentSelectat = ApiConfigFragment() // aici va veni ultimul ecran
             }
 
             // inlocuim fragmentul vechi cu cel nou selectat

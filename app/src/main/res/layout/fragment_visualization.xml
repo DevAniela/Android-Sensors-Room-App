@@ -9,27 +9,36 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vizualizare Grafice în Timp Real"
-        android:textSize="22sp"
+        android:text="Vizualizare Grafice (Selecție Multiplă)"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="#333333"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alege setul de date:"
-        android:textSize="16sp"
+        android:text="Bifează axele pe care vrei să le afișezi:"
+        android:textSize="14sp"
         android:layout_marginBottom="4dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerSelectieDate"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:background="#E0E0E0"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox android:id="@+id/chkAx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AX (Accel X)" android:textColor="#D32F2F" android:checked="true"/>
+            <CheckBox android:id="@+id/chkAy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AY (Accel Y)" android:textColor="#388E3C" android:checked="true" android:layout_marginStart="8dp"/>
+            <CheckBox android:id="@+id/chkAz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AZ (Accel Z)" android:textColor="#1976D2" android:checked="true" android:layout_marginStart="8dp"/>
+            <CheckBox android:id="@+id/chkGx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GX (Gyro X)" android:textColor="#F57C00" android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"

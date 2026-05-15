@@ -3,55 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F5F5F5">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date Salvate (Accelerometru)"
+        android:text="Vizualizare Grafice în Timp Real"
         android:textSize="22sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:textColor="#333333"
         android:layout_marginBottom="16dp"/>
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alege setul de date:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerSelectieDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:minHeight="48dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="16dp"/>
 
-        <Button
-            android:id="@+id/btnIncarca"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Afișează Date"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/btnSterge"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Șterge Tot"
-            android:backgroundTint="#D32F2F"
-            android:textColor="#FFFFFF"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
-
-    <ScrollView
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F5F5F5"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/tvDateSalvate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:text="Apasă 'Afișează Date' pentru a vedea istoricul din baza de date..."/>
-    </ScrollView>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:elevation="4dp"/>
 
 </LinearLayout>
